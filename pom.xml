@@ -116,7 +116,7 @@
 				<version>${liquibase.version}</version>
 				<configuration>
 					<driver>org.postgresql.Driver</driver>
-					<url>jdbc:postgresql://localhost:5432/car-part-db-dev</url>
+					<url>jdbc:postgresql://localhost:5432/marketplace-db-dev</url>
 					<username>postgres</username>
 					<password>postgres</password>
 					<outputChangeLogFile>src/main/resources/liquibase-outputChangeLog.xml</outputChangeLogFile>
@@ -161,6 +161,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>

@@ -44,5 +44,4 @@
                                  initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
                                  referencedColumnNames="id" referencedTableName="marketplace" validate="true"/>
     </changeSet>
-
 </databaseChangeLog>
