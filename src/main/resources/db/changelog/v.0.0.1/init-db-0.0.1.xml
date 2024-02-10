@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="ZmaevDA" id="1698581124717-1">
+        <createTable tableName="marketplace">
+            <column name="id" autoIncrement="true" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="marketplace_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="url" type="VARCHAR(255)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="logo" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ZmaevDA" id="1698581124717-2">
+        <createTable tableName="car_part_on_marketplace">
+            <column name="id" autoIncrement="true" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="car_part_on_marketplace_pkey"/>
+            </column>
+            <column name="marketplace_id" type="BIGINT">
+                <constraints unique="false" nullable="false"/>
+            </column>
+            <column name="is_original" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="car_part_id" type="BIGINT">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="last_price" type="DECIMAL">
+                <constraints nullable="true" unique="false"/>
+            </column>
+            <column name="url" type="VARCHAR(1024)">
+                <constraints unique="false" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="ZmaevDA" id="1698581124717-3">
+        <addForeignKeyConstraint baseColumnNames="marketplace_id" baseTableName="car_part_on_marketplace"
+                                 constraintName="fcgf31losx9j7jbn5d6bfgbcia734" deferrable="false"
+                                 initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+                                 referencedColumnNames="id" referencedTableName="marketplace" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

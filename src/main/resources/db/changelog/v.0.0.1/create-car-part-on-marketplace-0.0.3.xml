@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet author="ZmaevDA" id="8138281421253-1">
+        <insert tableName="car_part_on_marketplace">
+            <column name="id" value="1"/>
+            <column name="marketplace_id" value="1"/>
+            <column name="car_part_id" value="1"/>
+            <column name="last_price" value="347"/>
+            <column name="is_original" value="true"/>
+            <column name="url" value="https://www.ozon.ru/product/maslyanyy-filtr-sitroen-s4-s5-ford-fokus-2-3-pezho-307-407-1-1-2-2-po-filtron-oe-673-mann-hu711-51x-1313804034/?asb=qowRsxn7BeInD5o9C3sIZc%252Fhjywcd%252B2FVQauzEYxBK%252FdGlZlzXD1ddGVBlZj1usN&amp;quot;"/>
+        </insert>
+        <insert tableName="car_part_on_marketplace">
+            <column name="id" value="2"/>
+            <column name="marketplace_id" value="1"/>
+            <column name="car_part_id" value="1"/>
+            <column name="last_price" value="644"/>
+            <column name="is_original" value="true"/>
+            <column name="url" value="https://www.ozon.ru/product/filtr-maslyanyy-ford-focus-mondeo-transit-2-0d-3-2d-peugeot-206-407-1-1-2-0-866204254/?asb=hEX3u%252B9VZkwcyyF3%252BPY28L%252B3QmSjL%252FTYlfoH4H9fKg0%253Dasb2=wGA0GKm_QnHXpzD0XZodkszca9bQVf1RJnN2QqiG3eExQAH_XXEyCGDdRTMwSsXRoOlNK5VPXRssm5MmA5oi8wavtc=1avte=2avts=1707529243keywords=9818914980&amp;quot;"/>
+        </insert>
+        <insert tableName="car_part_on_marketplace">
+            <column name="id" value="3"/>
+            <column name="marketplace_id" value="1"/>
+            <column name="car_part_id" value="1"/>
+            <column name="last_price" value="522"/>
+            <column name="is_original" value="false"/>
+            <column name="url" value="https://www.ozon.ru/product/filtr-maslyanyy-filtron-na-sitroen-s4-s5-ford-fokus-pezho-307-407-po-mann-hu711-51x-oem-1244933230/?asb=GjYASov1WaVgwmRxyljIIWTZywRzEbn%252BUfXLpNnEhwQ%253D asb2=ubaIm9TdnVL23vrIGWL48dwEdhDFF7XbXQRa2tLUEXAj3clWRWKFotN1d8CRiz5jhrxZRDxxq8fmF-6crJUybAavtc=1avte=2avts=1707529299keywords=9818914980&amp;quot;"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet author="ZmaevDA" id="2138481421256-1">
+        <insert tableName="marketplace">
+            <column name="id" value="1"/>
+            <column name="name" value="Озон"/>
+            <column name="url" value="https://www.ozon.ru/"/>
+            <column name="logo" value="logo/ozon"/>
+        </insert>
+        <insert tableName="marketplace">
+            <column name="id" value="2"/>
+            <column name="name" value="СберМегаМаркет"/>
+            <column name="url" value="https://megamarket.ru/"/>
+            <column name="logo" value="logo/megamarket"/>
+        </insert>
+        <insert tableName="marketplace">
+            <column name="id" value="3"/>
+            <column name="name" value="Wildberries"/>
+            <column name="url" value="https://www.wildberries.ru/"/>
+            <column name="logo" value="logo/wildberries"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
