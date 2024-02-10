@@ -17,6 +17,9 @@ public class CarPartOnMarketplace {
     @JoinColumn(name = "marketplace_id", referencedColumnName = "id")
     private Marketplace marketplace;
 
+    @Column(name = "is_original")
+    private Boolean isOriginal;
+
     @Column(name = "car_part_id")
     private Long carPartId;
 
