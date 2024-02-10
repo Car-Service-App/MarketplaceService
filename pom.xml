@@ -26,6 +26,11 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
@@ -116,7 +121,7 @@
 				<version>${liquibase.version}</version>
 				<configuration>
 					<driver>org.postgresql.Driver</driver>
-					<url>jdbc:postgresql://localhost:5432/marketplace-db-dev</url>
+					<url>jdbc:postgresql://localhost:5432/car-part-db-dev</url>
 					<username>postgres</username>
 					<password>postgres</password>
 					<outputChangeLogFile>src/main/resources/liquibase-outputChangeLog.xml</outputChangeLogFile>
@@ -161,5 +166,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

@@ -11,5 +11,5 @@ public class MarketplaceRequestDto {
     @Schema(description = "URL маркетплейса")
     private final String url;
     @Schema(description = "Лого маркетплейса")
-    private final byte[] logo;
+    private final String logo;
 }

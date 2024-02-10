@@ -1,32 +1,29 @@
 package ru.vsu.cs.zmaev.marketplaceservice.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.vsu.cs.zmaev.marketplaceservice.domain.dto.EntityPage;
-import ru.vsu.cs.zmaev.marketplaceservice.domain.dto.criteria.MarketplaceCriteriaSearch;
 import ru.vsu.cs.zmaev.marketplaceservice.domain.dto.request.MarketplaceRequestDto;
 import ru.vsu.cs.zmaev.marketplaceservice.domain.dto.response.MarketplaceResponseDto;
 import ru.vsu.cs.zmaev.marketplaceservice.domain.entity.Marketplace;
 import ru.vsu.cs.zmaev.marketplaceservice.domain.mapper.MarketplaceMapper;
 import ru.vsu.cs.zmaev.marketplaceservice.exception.NoSuchEntityException;
-import ru.vsu.cs.zmaev.marketplaceservice.repository.criteria.CriteriaRepository;
 import ru.vsu.cs.zmaev.marketplaceservice.repository.jpa.MarketplaceRepository;
 import ru.vsu.cs.zmaev.marketplaceservice.service.MarketplaceService;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class MarketplaceServiceImpl implements MarketplaceService {
 
     private final MarketplaceRepository marketplaceRepository;
-    private final CriteriaRepository<Marketplace, MarketplaceCriteriaSearch> marketplaceCriteriaRepository;
     private final MarketplaceMapper marketplaceMapper;
 
     @Override
     @Transactional(readOnly = true)
-    public Page<MarketplaceResponseDto> findAllWithFilters(EntityPage entityPage, MarketplaceCriteriaSearch marketplaceCriteriaSearch) {
-        return marketplaceCriteriaRepository.findAllWithFilters(entityPage, marketplaceCriteriaSearch).map(marketplaceMapper::toDto);
+    public List<MarketplaceResponseDto> findAll() {
+        return marketplaceRepository.findAll().stream().map(marketplaceMapper::toDto).toList();
     }
 
     @Override

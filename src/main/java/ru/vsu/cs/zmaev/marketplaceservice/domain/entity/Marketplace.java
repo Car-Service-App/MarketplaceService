@@ -19,9 +19,8 @@ public class Marketplace {
     @Column(name = "url")
     private String url;
 
-    @Lob
     @Column(name = "logo")
-    private byte[] logo;
+    private String logo;
 
     @OneToMany(mappedBy = "marketplace")
     private List<CarPartOnMarketplace> carPartsOnMarketplace;
