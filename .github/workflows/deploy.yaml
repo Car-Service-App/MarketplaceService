@@ -61,7 +61,7 @@ jobs:
             docker rm marketplace-service || true
             docker rmi zmamz/marketplace-service || true
 
-      - name: Deploy Car Parts Service
+      - name: Deploy Marketplace Service
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.REMOTE_SERVER_HOST }}
@@ -69,7 +69,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             docker pull zmamz/marketplace-service:latest
-            docker run -d --name marketplace-service -p 8081:8081 \
+            docker run -d --name marketplace-service -p 8082:8082 \
             -e DB_HOST=${{ secrets.DB_HOST }} \
             -e DB_PORT=${{ secrets.DB_PORT }} \
             -e POSTGRES_DB=${{ secrets.POSTGRES_DB }} \
