@@ -29,6 +29,14 @@
             <column name="is_original" value="false"/>
             <column name="url" value="https://www.ozon.ru/product/filtr-maslyanyy-filtron-na-sitroen-s4-s5-ford-fokus-pezho-307-407-po-mann-hu711-51x-oem-1244933230/?asb=GjYASov1WaVgwmRxyljIIWTZywRzEbn%252BUfXLpNnEhwQ%253D asb2=ubaIm9TdnVL23vrIGWL48dwEdhDFF7XbXQRa2tLUEXAj3clWRWKFotN1d8CRiz5jhrxZRDxxq8fmF-6crJUybAavtc=1avte=2avts=1707529299keywords=9818914980&amp;quot;"/>
         </insert>
+        <insert tableName="car_part_on_marketplace">
+            <column name="id" value="4"/>
+            <column name="marketplace_id" value="1"/>
+            <column name="car_part_id" value="4"/>
+            <column name="last_price" value="401"/>
+            <column name="is_original" value="true"/>
+            <column name="url" value="https://www.ozon.ru/product/svecha-zazhiganiya-toyota-9091901275-dlya-toyota-auris-avensis-corolla-rav4-verso-prius-1sht-1149334429/?asb=J1Zh80bcEFLqGjjNaPcPfUXhvhkuRweVrkj1zlvt9j0%253D&amp;asb2=OfUqHeo-wK498dTnddzPSIvLOthRh34BKK3W8Hov62HY-wr2uh-5rBdTgJnvPNxLoKQ1bK3JLS8ZY48UaTSa0A&amp;avtc=1&amp;avte=2&amp;avts=1709963922&amp;keywords=9091901275"/>
+        </insert>
     </changeSet>
 
 </databaseChangeLog>
